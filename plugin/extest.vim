@@ -28,7 +28,10 @@ if !exists("g:extest_exunit_run_file_cmd")
   let g:extest_exunit_run_file_cmd = "mix test '%f'"
 endif
 if !exists("g:extest_exunit_run_test_cmd")
-  let g:extest_exunit_run_test_cmd = "mix test '%f'"
+  let g:extest_exunit_run_test_cmd = "mix test '%f:%l'"
+endif
+if !exists("g:extest_exunit_run_all_cmd")
+  let g:extest_exunit_run_all_cmd = "mix test"
 endif
 if !exists("g:extest_amrita_run_file_cmd")
   let g:extest_amrita_run_file_cmd = "mix amrita '%f'"
@@ -41,6 +44,7 @@ endif
 command ExTestRunFile call <SID>RunFile()
 command ExTestRunTest call <SID>RunTest()
 command ExTestRunLast call <SID>RunLast()
+command ExTestRunAll call <SID>RunAll()
 
 function s:RunFile()
   return s:ExecTestRun("file")
@@ -57,6 +61,11 @@ function s:RunLast()
   endif
 
   return s:RunCommand(g:extest_last_cmd)
+endfunction
+
+" i don't know what this does
+function s:RunAll()
+  return s:ExecTestRun("all")
 endfunction
 
 " Starts a test run.
