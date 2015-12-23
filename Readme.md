@@ -20,6 +20,7 @@ By default extest.vim doesn't bind to any keys but is available in the form of c
 * `:ExTestRunFile` runs all the tests in the file that is loaded into the current buffer
 * `:ExTestRunTest` runs the test case under the cursor
 * `:ExTestRunLast` runs the last test, from any buffer
+* `:ExTestRunAll` runs all the tests in the project
 
 If you want to bind those commands to your leader keys, you can do so nevertheless. For example:
 

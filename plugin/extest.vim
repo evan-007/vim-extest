@@ -63,7 +63,6 @@ function s:RunLast()
   return s:RunCommand(g:extest_last_cmd)
 endfunction
 
-" i don't know what this does
 function s:RunAll()
   return s:ExecTestRun("all")
 endfunction
