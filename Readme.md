@@ -25,10 +25,13 @@ By default extest.vim doesn't bind to any keys but is available in the form of c
 If you want to bind those commands to your leader keys, you can do so nevertheless. For example:
 
 ```vim
-map <leader>T :ExTestRunFile<CR>
+map <leader>f :ExTestRunFile<CR>
 map <leader>t :ExTestRunTest<CR>
-map <leader>lt :ExTestRunLast<CR>
+map <leader>l :ExTestRunLast<CR>
+map <leader>a :ExTestRunAll<CR>
 ```
+
+Note that `ExTestRunAll` does not need to be run in a test file.
 
 ## Customizing
 You can customize the command which will be used to run each test by setting these options in your `.vimrc` file:

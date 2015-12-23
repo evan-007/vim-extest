@@ -64,7 +64,8 @@ function s:RunLast()
 endfunction
 
 function s:RunAll()
-  return s:ExecTestRun("all")
+  echo "mix test"
+  exe "!mix test"
 endfunction
 
 " Starts a test run.
